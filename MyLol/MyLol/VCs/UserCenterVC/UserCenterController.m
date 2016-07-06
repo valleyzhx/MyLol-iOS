@@ -158,7 +158,10 @@
     
     
 }
-
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
 
 #pragma mark ------ Actions
 
@@ -221,6 +224,6 @@
 
 -(void)pushWithoutTabbar:(UIViewController*)vc{
     [self.navigationController pushViewController:vc animated:YES];
-    self.hidesBottomBarWhenPushed = NO;
+//    self.hidesBottomBarWhenPushed = NO;
 }
 @end

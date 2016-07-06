@@ -33,7 +33,7 @@
     [_naviBar addSubview:_searchBar];
     _searchBar.delegate = self;// 设置代理
 
-    _searchBar.text = @"dota";
+    _searchBar.text = @"英雄联盟";
     
     _backGroundBtn = [[UIButton alloc]initWithFrame:self.view.bounds];
     _backGroundBtn.backgroundColor = [UIColor blackColor];

@@ -7,7 +7,7 @@
 //
 
 #import "TVViewController.h"
-#import "UMOnlineConfig.h"
+#import "AppConfigure.h"
 #import "TVListModel.h"
 #import <UIImageView+AFNetworking.h>
 #import "VideoListCell.h"
@@ -29,17 +29,13 @@
     _naviBar = [self setUpNaviViewWithType:GGNavigationBarTypeCustom];
     _naviBar.backgroundView.alpha = 1;
 
-    // Do any additional setup after loading the view.
-    
-//    _webView = [[UIWebView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 40)];
-//    _webView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
-//    [self.view addSubview:_webView];
     self.title = @"直播";
     self.tableView.tableHeaderView = ({
-        UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 48)];
+        UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 20+48)];
         view.backgroundColor = viewBGColor;
         view;
     });
+    
     self.tableView.mj_header = [MJRefreshGifHeader headerWithRefreshingTarget:self refreshingAction:@selector(reloadTheDataAction)];
     
     [self loadTVListData];
@@ -47,7 +43,7 @@
 
 -(void)loadTVListData{
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    NSString *tvLiveUrl = [UMOnlineConfig getConfigParams:kZqlist];
+    NSString *tvLiveUrl = [AppConfigure getConfigParams:kZqlist];
         [TVListModel loadTVList:tvLiveUrl complish:^(id objc) {
             _listModel = objc;
             [self.tableView reloadData];
@@ -126,6 +122,6 @@
 
 -(void)pushWithoutTabbar:(UIViewController*)vc{
     [self.navigationController pushViewController:vc animated:YES];
-    self.hidesBottomBarWhenPushed = NO;
+//    self.hidesBottomBarWhenPushed = NO;
 }
 @end

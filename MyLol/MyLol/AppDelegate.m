@@ -13,7 +13,7 @@
 #import "WXApiManager.h"
 #import "MyDefines.h"
 #import "UMFeedback.h"
-#import "UMOnlineConfig.h"
+#import "AppConfigure.h"
 #import "TVListModel.h"
 
 @interface AppDelegate ()
@@ -25,15 +25,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
+    [AppConfigure updateConfigure];
     [WXApi registerApp:WXApi_ID];
     [MobClick startWithAppkey:MobClick_ID];
     [UMFeedback setAppkey:MobClick_ID];
-    [UMOnlineConfig updateOnlineConfigWithAppkey:MobClick_ID];
     
     [self.window makeKeyAndVisible];
     
-    [self initGDTSplashAd];
+//    [self initGDTSplashAd];
     
     
     

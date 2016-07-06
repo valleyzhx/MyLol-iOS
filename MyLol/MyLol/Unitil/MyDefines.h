@@ -12,7 +12,7 @@
 #define SCREEN_BOUNDS [[UIScreen mainScreen] bounds]
 
 #define WXApi_ID @"wx1bc2f1985a2547b5"
-#define MobClick_ID @"539093f556240b01ab039989"
+#define MobClick_ID @"577c7d4467e58efd190023d3"
 
 #define kZqlist @"zqlist"
 #define kZqlive @"zqlive"
@@ -29,7 +29,7 @@
 #define RGBA_COLOR(R, G, B, A) [UIColor colorWithRed:((R) / 255.0f) green:((G) / 255.0f) blue:((B) / 255.0f) alpha:A]
 
 //导航条颜色
-#define Nav_Color RGBA_COLOR(71.0,141.0,244.0,1)
+#define Nav_Color UIColorFromRGB(0x0095e0)
 //通用 view背景色
 #define viewBGColor RGBA_COLOR(238,241,245,1)
 

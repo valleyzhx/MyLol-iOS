@@ -7,7 +7,7 @@
 //
 
 #import "M3U8Tool.h"
-#import "UMOnlineConfig.h"
+#import "AppConfigure.h"
 
 static const char encodingTable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 
@@ -78,7 +78,7 @@ static const char encodingTable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopq
 
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
-    NSString *videoJS = [UMOnlineConfig getConfigParams:kVideojs];
+    NSString *videoJS = [AppConfigure getConfigParams:kVideojs];
     NSString *lJs = [videoJS stringByAppendingFormat:@"getVideoM3u8('%@');",_type];
     _lHtml = [webView stringByEvaluatingJavaScriptFromString:lJs];
     if (_lHtml.length) {

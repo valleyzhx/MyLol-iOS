@@ -207,7 +207,7 @@
 -(void)loadAddView{
     _adView = [[GADBannerView alloc]
                initWithFrame:CGRectMake((SCREEN_WIDTH-320)/2,10,320,50)];
-    _adView.adUnitID = @"ca-app-pub-7534063156170955/3475809624";//调用id
+    _adView.adUnitID = @"ca-app-pub-7534063156170955/1342594821";//调用id
     
     _adView.rootViewController = self;
     UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 60)];

@@ -9,7 +9,7 @@
 #import "LiveViewController.h"
 #import "VKVideoPlayer.h"
 #import "MyDefines.h"
-#import "UMOnlineConfig.h"
+#import "AppConfigure.h"
 #import <GoogleMobileAds/GoogleMobileAds.h>
 
 
@@ -68,7 +68,7 @@
 }
 
 -(void)loadVideoData {
-    NSString* baseUrl = [UMOnlineConfig getConfigParams:kZqlive];
+    NSString* baseUrl = [AppConfigure getConfigParams:kZqlive];
     NSString *url = [baseUrl stringByAppendingFormat:@"%@.m3u8",_tvModel.videoId];
     
     [self.player loadVideoWithStreamURL:[NSURL URLWithString:url]];

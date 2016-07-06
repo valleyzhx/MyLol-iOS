@@ -16,7 +16,28 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lol_icon" translatesAutoresizingMaskIntoConstraints="NO" id="PFJ-y9-5Vs">
+                                <rect key="frame" x="172" y="172" width="256" height="256"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="128" id="BNi-Sb-7b0"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="128" id="DbZ-dY-JDu"/>
+                                    <constraint firstAttribute="height" constant="114" id="KEw-iJ-ZgL"/>
+                                    <constraint firstAttribute="width" constant="114" id="qBN-8J-2Hz"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="KEw-iJ-ZgL"/>
+                                        <exclude reference="qBN-8J-2Hz"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.58431372549019611" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="PFJ-y9-5Vs" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="9fD-ng-xuj"/>
+                            <constraint firstItem="PFJ-y9-5Vs" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="tnQ-dR-TYc"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +45,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="lol_icon" width="256" height="256"/>
+    </resources>
 </document>

@@ -66,7 +66,7 @@ typedef enum : NSUInteger {
     self.edgesForExtendedLayout=UIRectEdgeNone;
     _naviBar = [self setUpNaviViewWithType:GGNavigationBarTypeCustom];
     _naviBar.alpha = 0;
-    _naviBar.title = @"刀一把";
+    _naviBar.title = @"MyLol";
     _introModelArr = [NSMutableArray array];
     
     [self loadDotaVideos];
@@ -367,7 +367,7 @@ typedef enum : NSUInteger {
 
 -(void)pushWithoutTabbar:(UIViewController*)vc{
     [self.navigationController pushViewController:vc animated:YES];
-    self.hidesBottomBarWhenPushed = NO;
+//    self.hidesBottomBarWhenPushed = NO;
 }
 
 #pragma mark --- WXApiManagerDelegate

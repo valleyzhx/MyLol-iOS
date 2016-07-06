@@ -121,6 +121,11 @@
     return nil;
 }
 
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
+
 
 #pragma mark GDT Degetate
 - (void)bannerViewDidReceived{
