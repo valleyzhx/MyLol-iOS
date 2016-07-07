@@ -8,7 +8,6 @@
 
 #import "ADViewController.h"
 #import "MyDefines.h"
-#import <GoogleMobileAds/GoogleMobileAds.h>
 #import "GGRequest.h"
 #import "UIImageView+AFNetworking.h"
 
@@ -75,9 +74,8 @@
         _interstitial.delegate = nil;
         _interstitial = nil;
     }
-    _interstitial = [[GADInterstitial alloc] init];
+    _interstitial = [[GADInterstitial alloc] initWithAdUnitID:@"ca-app-pub-7534063156170955/2819328021"];
     _interstitial.delegate = self;
-    _interstitial.adUnitID = @"ca-app-pub-7534063156170955/2819328021";
     GADRequest *request = [GADRequest request];
 #if DEBUG
     request.testDevices = @[ @"5610fbd8aa463fcd021f9f235d9f6ba1" ];

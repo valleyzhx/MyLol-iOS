@@ -15,6 +15,8 @@
 #import <Masonry.h>
 #import "UrlManager.h"
 #import <AFNetworking.h>
+#import <GoogleMobileAds/GoogleMobileAds.h>
+
 
 #ifndef __OPTIMIZE__
 #define NSLog(...) NSLog(__VA_ARGS__)

@@ -23,7 +23,7 @@
 
 
 -(void)viewDidLoad{
-    self.showGDTADView = YES;
+//    self.showGDTADView = YES;
     [super viewDidLoad];
     _naviBar.backgroundView.alpha = 1;
     _searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(40, 22, (SCREEN_WIDTH - 50) , 40)] ;
