@@ -17,7 +17,7 @@
 
 #define imageHeight 230
 
-@interface UserCenterController ()<UzysAssetsPickerControllerDelegate,UITableViewDataSource,UITableViewDelegate>
+@interface UserCenterController ()<UzysAssetsPickerControllerDelegate,UITableViewDataSource,UITableViewDelegate,GADInterstitialDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *imagView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -25,6 +25,8 @@
 
 @implementation UserCenterController{
     NSArray *_titleArr;
+    GADInterstitial *_interstitial;
+
 }
 
 - (void)viewDidLoad {
@@ -44,7 +46,7 @@
 
         view;
     });
-    _titleArr = @[@[@"我的收藏"],@[@"意见反馈",@"给个好评"],@[@"每日一句"]];
+    _titleArr = @[@[@"我的收藏"],@[@"意见反馈",@"给个好评"],@[@"每日一句",@"广告~谢谢"]];
     
 }
 
@@ -151,9 +153,14 @@
                                      ThumbImage:nil
                                         InScene:WXSceneSession];
     }
-    if (indexPath.section == 2) {
-        ADViewController *controller = [[ADViewController alloc]init];
-        [self pushWithoutTabbar:controller];
+    if (indexPath.section == 2 ) {
+        if (indexPath.row == 0) {
+            ADViewController *controller = [[ADViewController alloc]init];
+            [self pushWithoutTabbar:controller];
+        }else{
+            [self loadGoogleAd];
+        }
+        
     }
     
     
@@ -161,6 +168,22 @@
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
     return UIStatusBarStyleLightContent;
+}
+
+
+-(void)loadGoogleAd{
+    if (_interstitial) {
+        _interstitial.delegate = nil;
+        _interstitial = nil;
+    }
+    _interstitial = [[GADInterstitial alloc] initWithAdUnitID:@"ca-app-pub-7534063156170955/2819328021"];
+    _interstitial.delegate = self;
+    GADRequest *request = [GADRequest request];
+#if DEBUG
+    request.testDevices = @[ @"5610fbd8aa463fcd021f9f235d9f6ba1" ];
+#endif
+    [_interstitial loadRequest:request];
+    [MobClick event:@"GoogleLargeAd"];
 }
 
 #pragma mark ------ Actions

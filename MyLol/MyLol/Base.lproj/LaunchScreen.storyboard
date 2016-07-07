@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lol_icon" translatesAutoresizingMaskIntoConstraints="NO" id="PFJ-y9-5Vs">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="lol_icon" translatesAutoresizingMaskIntoConstraints="NO" id="PFJ-y9-5Vs">
                                 <rect key="frame" x="172" y="172" width="256" height="256"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="128" id="BNi-Sb-7b0"/>

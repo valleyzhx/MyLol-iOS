@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8600DAAD9A37511EAF95C844 /* libPods-MyLol.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 859E71527C6C7369A3E3AC55 /* libPods-MyLol.a */; };
+		F03532D51D2E7670001D2DA2 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F03532D41D2E7670001D2DA2 /* GoogleMobileAds.framework */; };
 		F05146251D2B5BA800D3A8E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F05146241D2B5BA800D3A8E7 /* main.m */; };
 		F05146281D2B5BA800D3A8E7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F05146271D2B5BA800D3A8E7 /* AppDelegate.m */; };
 		F05146311D2B5BA800D3A8E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F051462F1D2B5BA800D3A8E7 /* Main.storyboard */; };
@@ -30,7 +31,6 @@
 		F05146BE1D2B5BE600D3A8E7 /* VideoListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F051465E1D2B5BE600D3A8E7 /* VideoListModel.m */; };
 		F05146BF1D2B5BE600D3A8E7 /* VideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F05146601D2B5BE600D3A8E7 /* VideoModel.m */; };
 		F05146C11D2B5BE600D3A8E7 /* FMDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F05146651D2B5BE600D3A8E7 /* FMDBManager.m */; };
-		F05146C21D2B5BE600D3A8E7 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F05146691D2B5BE600D3A8E7 /* GoogleMobileAds.framework */; };
 		F05146C31D2B5BE600D3A8E7 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = F051466A1D2B5BE600D3A8E7 /* README.txt */; };
 		F05146C41D2B5BE600D3A8E7 /* libGDTMobSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F05146701D2B5BE600D3A8E7 /* libGDTMobSDK.a */; };
 		F05146C51D2B5BE600D3A8E7 /* IntroControll.m in Sources */ = {isa = PBXBuildFile; fileRef = F05146731D2B5BE600D3A8E7 /* IntroControll.m */; };
@@ -79,6 +79,7 @@
 		0A1894ECC88DC82689C2C0D0 /* Pods-MyLol.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyLol.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyLol/Pods-MyLol.release.xcconfig"; sourceTree = "<group>"; };
 		51DEDB4A259E6057804FE110 /* Pods-MyLol.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyLol.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyLol/Pods-MyLol.debug.xcconfig"; sourceTree = "<group>"; };
 		859E71527C6C7369A3E3AC55 /* libPods-MyLol.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyLol.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F03532D41D2E7670001D2DA2 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		F05146201D2B5BA800D3A8E7 /* MyLol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLol.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F05146241D2B5BA800D3A8E7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F05146261D2B5BA800D3A8E7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -123,7 +124,6 @@
 		F05146601D2B5BE600D3A8E7 /* VideoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoModel.m; sourceTree = "<group>"; };
 		F05146641D2B5BE600D3A8E7 /* FMDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDBManager.h; sourceTree = "<group>"; };
 		F05146651D2B5BE600D3A8E7 /* FMDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDBManager.m; sourceTree = "<group>"; };
-		F05146691D2B5BE600D3A8E7 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		F051466A1D2B5BE600D3A8E7 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		F051466C1D2B5BE600D3A8E7 /* GDTMobBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTMobBannerView.h; sourceTree = "<group>"; };
 		F051466D1D2B5BE600D3A8E7 /* GDTMobInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTMobInterstitial.h; sourceTree = "<group>"; };
@@ -215,9 +215,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F05146C21D2B5BE600D3A8E7 /* GoogleMobileAds.framework in Frameworks */,
 				F05146D21D2B5BE600D3A8E7 /* libWeChatSDK.a in Frameworks */,
 				F05146C41D2B5BE600D3A8E7 /* libGDTMobSDK.a in Frameworks */,
+				F03532D51D2E7670001D2DA2 /* GoogleMobileAds.framework in Frameworks */,
 				8600DAAD9A37511EAF95C844 /* libPods-MyLol.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,7 +383,7 @@
 		F05146681D2B5BE600D3A8E7 /* AdMob_SDK_700 */ = {
 			isa = PBXGroup;
 			children = (
-				F05146691D2B5BE600D3A8E7 /* GoogleMobileAds.framework */,
+				F03532D41D2E7670001D2DA2 /* GoogleMobileAds.framework */,
 				F051466A1D2B5BE600D3A8E7 /* README.txt */,
 			);
 			path = AdMob_SDK_700;
@@ -781,7 +781,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -819,7 +819,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -838,7 +838,7 @@
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MyLol/PrefixHeader.pch";
 				INFOPLIST_FILE = MyLol/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -864,7 +864,7 @@
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MyLol/PrefixHeader.pch";
 				INFOPLIST_FILE = MyLol/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -874,7 +874,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.simplan.MyLol;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8ecd503c-2cb9-434d-a11f-d38507d1fd4e";
+				PROVISIONING_PROFILE = "2fabf1c6-6ad2-47af-8707-4e339e37c8c2";
 			};
 			name = Release;
 		};
