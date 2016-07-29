@@ -30,6 +30,9 @@
 @property (nonatomic,assign) BOOL showGDTADView;
 
 
+-(void)loadGooglePresentAd;
+
+
 -(void)showHudView;
 -(void)hideHudView;
 

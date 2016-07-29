@@ -13,12 +13,13 @@
 
 #define IS_OS_7_OR_LATER    ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0)
 
-@interface BaseViewController ()<GDTMobBannerViewDelegate>
+@interface BaseViewController ()<GDTMobBannerViewDelegate,GADInterstitialDelegate>
 
 @end
 
 @implementation BaseViewController{
     BOOL isLoading;
+    GADInterstitial *_interstitial;
 }
 
 - (void)viewDidLoad {
@@ -76,6 +77,21 @@
         _bannerView.delegate = nil;
         _bannerView = nil;
     }
+}
+
+-(void)loadGooglePresentAd{
+    if (_interstitial) {
+        _interstitial.delegate = nil;
+        _interstitial = nil;
+    }
+    _interstitial = [[GADInterstitial alloc] initWithAdUnitID:@"ca-app-pub-7534063156170955/2819328021"];
+    _interstitial.delegate = self;
+    GADRequest *request = [GADRequest request];
+#if DEBUG
+    request.testDevices = @[ @"5610fbd8aa463fcd021f9f235d9f6ba1" ];
+#endif
+    [_interstitial loadRequest:request];
+    [MobClick event:@"GoogleLargeAd"];
 }
 
 
@@ -140,10 +156,18 @@
 }
 
 
+#pragma mark -
+#pragma mark AdMoGoDelegate delegate
+
+- (void)interstitialDidReceiveAd:(GADInterstitial *)interstitial {
+    [_interstitial presentFromRootViewController:self];
+}
+
 -(void)dealloc{
     _tableView = nil;
     _bannerView.delegate = nil;
     _bannerView = nil;
+    _interstitial.delegate = nil;
 }
 
 @end

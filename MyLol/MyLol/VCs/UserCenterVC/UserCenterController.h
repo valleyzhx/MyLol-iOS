@@ -6,8 +6,8 @@
 //  Copyright © 2015年 iOGG. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface UserCenterController : UIViewController
+@interface UserCenterController : BaseViewController
 
 @end

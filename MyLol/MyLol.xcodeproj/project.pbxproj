@@ -71,6 +71,7 @@
 		F051471A1D2B8EAE00D3A8E7 /* ShoppingController.m in Sources */ = {isa = PBXBuildFile; fileRef = F05147151D2B8EAE00D3A8E7 /* ShoppingController.m */; };
 		F051471B1D2B8EAE00D3A8E7 /* UserCenterController.m in Sources */ = {isa = PBXBuildFile; fileRef = F05147171D2B8EAE00D3A8E7 /* UserCenterController.m */; };
 		F07DE6341D2CB439005D14CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F05146321D2B5BA800D3A8E7 /* Assets.xcassets */; };
+		F0D91F251D4AFDF4009B88B6 /* UIView+UIImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D91F241D4AFDF4009B88B6 /* UIView+UIImage.m */; };
 		F0EE9F0B1D2CD7910079D327 /* AppConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EE9F0A1D2CD7910079D327 /* AppConfigure.m */; };
 		F0EE9F0E1D2CF6E50079D327 /* GGNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EE9F0D1D2CF6E50079D327 /* GGNavigationController.m */; };
 /* End PBXBuildFile section */
@@ -204,6 +205,8 @@
 		F05147151D2B8EAE00D3A8E7 /* ShoppingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingController.m; sourceTree = "<group>"; };
 		F05147161D2B8EAE00D3A8E7 /* UserCenterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCenterController.h; sourceTree = "<group>"; };
 		F05147171D2B8EAE00D3A8E7 /* UserCenterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCenterController.m; sourceTree = "<group>"; };
+		F0D91F231D4AFDF4009B88B6 /* UIView+UIImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+UIImage.h"; sourceTree = "<group>"; };
+		F0D91F241D4AFDF4009B88B6 /* UIView+UIImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+UIImage.m"; sourceTree = "<group>"; };
 		F0EE9F091D2CD7910079D327 /* AppConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConfigure.h; sourceTree = "<group>"; };
 		F0EE9F0A1D2CD7910079D327 /* AppConfigure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConfigure.m; sourceTree = "<group>"; };
 		F0EE9F0C1D2CF6E50079D327 /* GGNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGNavigationController.h; sourceTree = "<group>"; };
@@ -312,6 +315,8 @@
 				F051464C1D2B5BE600D3A8E7 /* VideoListCell.h */,
 				F051464D1D2B5BE600D3A8E7 /* VideoListCell.m */,
 				F051464E1D2B5BE600D3A8E7 /* VideoListCell.xib */,
+				F0D91F231D4AFDF4009B88B6 /* UIView+UIImage.h */,
+				F0D91F241D4AFDF4009B88B6 /* UIView+UIImage.m */,
 			);
 			path = GGCommen;
 			sourceTree = "<group>";
@@ -690,6 +695,7 @@
 				F05146D71D2B5BE600D3A8E7 /* M3U8Tool.m in Sources */,
 				F05146D41D2B5BE600D3A8E7 /* WXApiManager.m in Sources */,
 				F05147191D2B8EAE00D3A8E7 /* FavoVideoListController.m in Sources */,
+				F0D91F251D4AFDF4009B88B6 /* UIView+UIImage.m in Sources */,
 				F05147031D2B837C00D3A8E7 /* AuthorVideoListController.m in Sources */,
 				F05146B11D2B5BE600D3A8E7 /* BaseViewController.m in Sources */,
 				F05146DE1D2B5BE600D3A8E7 /* UserManager.m in Sources */,

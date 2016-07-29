@@ -16,6 +16,7 @@
 #import "UrlManager.h"
 #import <AFNetworking.h>
 #import <GoogleMobileAds/GoogleMobileAds.h>
+#import "UIView+UIImage.h"
 
 
 #ifndef __OPTIMIZE__

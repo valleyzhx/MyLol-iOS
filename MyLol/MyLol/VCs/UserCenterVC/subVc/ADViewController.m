@@ -70,18 +70,7 @@
 
 
 -(void)tapTheAction:(UITapGestureRecognizer*)tap{
-    if (_interstitial) {
-        _interstitial.delegate = nil;
-        _interstitial = nil;
-    }
-    _interstitial = [[GADInterstitial alloc] initWithAdUnitID:@"ca-app-pub-7534063156170955/2819328021"];
-    _interstitial.delegate = self;
-    GADRequest *request = [GADRequest request];
-#if DEBUG
-    request.testDevices = @[ @"5610fbd8aa463fcd021f9f235d9f6ba1" ];
-#endif
-    [_interstitial loadRequest:request];
-    [MobClick event:@"GoogleLargeAd"];
+    [self loadGooglePresentAd];
 }
 
 
@@ -140,11 +129,5 @@
 
 }
 
-#pragma mark -
-#pragma mark AdMoGoDelegate delegate
-
-- (void)interstitialDidReceiveAd:(GADInterstitial *)interstitial {
-    [interstitial presentFromRootViewController:self];
-}
 
 @end

@@ -31,8 +31,8 @@
     [UMFeedback setAppkey:MobClick_ID];
     
     [self.window makeKeyAndVisible];
-    
-//    [self initGDTSplashAd];
+
+    [self initGDTSplashAd];
     
     
     
@@ -44,22 +44,12 @@
     
     GDTSplashAd *splash = [[GDTSplashAd alloc] initWithAppkey:@"1104096526" placementId:@"1030000658357420"];
     splash.delegate = self; //设置代理
-    //根据iPhone设备不同设置不同背景图
+  
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"LaunchScreen" bundle:nil];
+    UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"ViewController"];
+    vc.view.frame = self.window.bounds;
     
-    NSString *colorStr;
-    if (IS_IPHONE_6P) {
-        colorStr = @"LaunchImage-800-Portrait-736h";
-    }else if (IS_IPHONE_6){
-        colorStr = @"LaunchImage-800-667h";
-        
-    }else if (IS_IPHONE_5){
-        colorStr = @"LaunchImage-700-568h";
-        
-    }else{
-        colorStr = @"LaunchImage-700";
-    }
-    
-    splash.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:colorStr]];
+    splash.backgroundColor = [UIColor colorWithPatternImage:[vc.view imageOfView]];
     splash.fetchDelay = 3; //开发者可以设置开屏拉取时间,超时则放弃展示
     //开屏广告拉取并展示在当前window中
     [splash loadAdAndShowInWindow:self.window];

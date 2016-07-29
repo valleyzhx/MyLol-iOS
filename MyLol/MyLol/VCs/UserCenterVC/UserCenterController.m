@@ -19,13 +19,11 @@
 
 @interface UserCenterController ()<UzysAssetsPickerControllerDelegate,UITableViewDataSource,UITableViewDelegate,GADInterstitialDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *imagView;
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
 @implementation UserCenterController{
     NSArray *_titleArr;
-    GADInterstitial *_interstitial;
 
 }
 
@@ -33,9 +31,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = viewBGColor;
-    
     [self setHeaderImage];
-    
     self.tableView.backgroundColor = [UIColor clearColor];
     [self.tableView setHiddenExtrLine:YES];
     self.tableView.tableHeaderView = ({
@@ -46,8 +42,9 @@
 
         view;
     });
+    [self.view bringSubviewToFront:self.tableView];
     _titleArr = @[@[@"我的收藏"],@[@"意见反馈",@"给个好评"],@[@"每日一句",@"广告~谢谢"]];
-    
+    _naviBar.hidden = YES;
 }
 
 -(void)setHeaderImage{
@@ -158,7 +155,7 @@
             ADViewController *controller = [[ADViewController alloc]init];
             [self pushWithoutTabbar:controller];
         }else{
-            [self loadGoogleAd];
+            [self loadGooglePresentAd];
         }
         
     }
@@ -170,21 +167,6 @@
     return UIStatusBarStyleLightContent;
 }
 
-
--(void)loadGoogleAd{
-    if (_interstitial) {
-        _interstitial.delegate = nil;
-        _interstitial = nil;
-    }
-    _interstitial = [[GADInterstitial alloc] initWithAdUnitID:@"ca-app-pub-7534063156170955/2819328021"];
-    _interstitial.delegate = self;
-    GADRequest *request = [GADRequest request];
-#if DEBUG
-    request.testDevices = @[ @"5610fbd8aa463fcd021f9f235d9f6ba1" ];
-#endif
-    [_interstitial loadRequest:request];
-    [MobClick event:@"GoogleLargeAd"];
-}
 
 #pragma mark ------ Actions
 
@@ -211,7 +193,6 @@
     }];
     
 }
-
 
 
 #pragma mark --- UzysAssetsPickerControllerDelegate
