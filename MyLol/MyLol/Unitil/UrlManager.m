@@ -12,7 +12,7 @@
 
 +(NSString *)getHomeCateUrl{
     
-    NSString *url = @"https://api.youku.com/quality/video/by/keyword.json?client_id=e2306ead120d2e34&keyword=英雄联盟&count=11";
+    NSString *url = @"https://openapi.youku.com/v2/searches/video/by_keyword.json?client_id=e2306ead120d2e34&keyword=钓鱼&page=10";
     
     return [self utf8URL:url];
 }

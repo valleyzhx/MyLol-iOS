@@ -64,9 +64,9 @@
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
     _closeBtn.hidden = ![webView canGoBack];
 }
-- (void)webView:(UIWebView *)webView didFailLoadWithError:(nullable NSError *)error{
-    
-}
+//- (void)webView:(UIWebView *)webView didFailLoadWithError:( NSError *)error{
+//    
+//}
 
 
 @end
